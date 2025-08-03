@@ -5,8 +5,9 @@ import jakarta.persistence.Id;
 
 @Entity
 public class Editora {
+
     @Id
-    private Long id;
+    private int id;
 
     private String nome;
     private String telefone;
@@ -15,11 +16,18 @@ public class Editora {
     public Editora() {
     }
 
-    public Long getId() {
+    public Editora(int id, String nome, String telefone, String endereco) {
+        this.id = id;
+        this.nome = nome;
+        this.telefone = telefone;
+        this.endereco = endereco;
+    }
+
+    public int getId() {
         return id;
     }
 
-    public void setId(Long id) {
+    public void setId(int id) {
         this.id = id;
     }
 
@@ -44,13 +52,6 @@ public class Editora {
     }
 
     public void setEndereco(String endereco) {
-        this.endereco = endereco;
-    }
-
-    public Editora(Long id, String nome, String telefone, String endereco) {
-        this.id = id;
-        this.nome = nome;
-        this.telefone = telefone;
         this.endereco = endereco;
     }
 }
