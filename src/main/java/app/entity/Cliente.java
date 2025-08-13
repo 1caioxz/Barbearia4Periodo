@@ -5,7 +5,7 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 
 @Entity
-public class Autor {
+public class Cliente {
 
     @Id
     private Long id;
@@ -13,13 +13,13 @@ public class Autor {
     private String Cpf;
     private Integer Idade;
 
-    public Autor(Long id, String nome, String cpf, Integer idade) {
+    public Cliente(Long id, String nome, String cpf, Integer idade) {
         this.id = id;
         this.nome = nome;
         Cpf = cpf;
         Idade = idade;
     }
-    public Autor() {
+    public Cliente() {
     }
 
     public Long getId() {
